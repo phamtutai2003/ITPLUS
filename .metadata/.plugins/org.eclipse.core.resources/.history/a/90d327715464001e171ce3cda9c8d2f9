@@ -1,0 +1,28 @@
+package BT1;
+
+public class Program {
+
+	public static void main(String[] args) {
+		ChucVu cv1 = new ChucVu();
+		cv1.machucvu = 1;
+		cv1.chucvu = "Truong Phong";
+		
+		// TODO Auto-generated method stub
+ NhanVien nv1 = new NhanVien();
+ nv1.id = 1;
+ nv1.name = "Tai";
+ nv1.age = 20;
+ nv1.chucvu = cv1;
+
+ 
+ NhanVien nv2 = new NhanVien();
+ nv2.id= 2;
+ nv2.name ="Truong";
+ nv2.age = 35;
+
+ System.out.println(nv2.name);
+ System.out.println(nv1.chucvu);
+		 
+	}
+
+}

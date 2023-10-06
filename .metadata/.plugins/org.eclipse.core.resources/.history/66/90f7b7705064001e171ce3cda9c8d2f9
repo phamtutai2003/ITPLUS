@@ -1,0 +1,6 @@
+package BT1;
+
+public static void main(String[] args) {
+NhanVien nhanvien1 = new NhanVien();
+ nhanvien1.id = 1;
+}
