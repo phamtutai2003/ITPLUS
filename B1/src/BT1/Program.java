@@ -29,7 +29,7 @@ public class Program {
  nv2.chucvu = cv1;
  nv2.phongban = pb1;
 
- System.out.println(nv1.phongban.tenphong);
+ System.out.println(nv1.phongban.tenphong );
  System.out.println(nv1.chucvu.chucvu);
 		 
 	}
