@@ -7,4 +7,11 @@ public class Account {
 	Gender gender;
 	Department departmentid;
 	Position positionid;
+	
+	@Override
+	public String toString() {
+		String hienthi = "";
+		hienthi += id + "\n" + email + "\n" + userName +"\n";
+		return hienthi;
+	}
 }

@@ -46,12 +46,12 @@ public class Program {
          account2.positionid = studentPosition; 
          
          Account account3 = new Account();
-         account2.id = 2;
-         account2.email = "student1@example.com";
-         account2.userName = "student3";
-         account2.gender = Gender.FEMALE;
-         account2.departmentid = department3;
-         account2.positionid = studentPosition;
+         account3.id = 3;
+         account3.email = "student1@example.com";
+         account3.userName = "student3";
+         account3.gender = Gender.FEMALE;
+         account3.departmentid = department3;
+         account3.positionid = studentPosition;
          
          /////
          Account[] IT1 = {account1 , account2, account3 };
@@ -67,7 +67,14 @@ public class Program {
          clazz2.name = "IT2";
          clazz2.study = IT2;
          
+         Clazz clazz3 = new Clazz();
+         clazz3.id = 3;
+         clazz3.name = "IT3";
+         clazz3.study = IT1;
+         
+         
          //////
+         System.out.println(account1);
          
          System.out.println("Danh sách các tài khoản trong Clazz " + clazz1.name + ":");
          for (Account account : clazz1.study) {
