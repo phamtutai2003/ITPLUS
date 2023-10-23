@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="Acount"/>
+    <fullyQualifiedTypeName name="entity.Department"/>
+    <fullyQualifiedTypeName name="entity.IStudy"/>
+    <fullyQualifiedTypeName name="entity.IT1"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="Inheritance.ITPLus"/>
+    <fullyQualifiedTypeName name="Animal.Dog"/>
+    <fullyQualifiedTypeName name="BT.Animal"/>
 </qualifiedTypeNameHistroy>
