@@ -9,4 +9,7 @@
     <fullyQualifiedTypeName name="Inheritance.ITPLus"/>
     <fullyQualifiedTypeName name="Animal.Dog"/>
     <fullyQualifiedTypeName name="BT.Animal"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="entity.Product"/>
 </qualifiedTypeNameHistroy>
