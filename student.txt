@@ -1,0 +1,12 @@
+Name: John Doe
+Age: 20
+Major: Computer Science
+---------------
+Name: Jane Doe
+Age: 22
+Major: Mathematics
+---------------
+Name: Bob Smith
+Age: 21
+Major: Physics
+---------------
