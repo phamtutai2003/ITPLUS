@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Thực hiện thao tác trên form</title>
+</head>
+<body>
+    <form id="myForm" onsubmit="xuLyForm(); return false;">
+        <label for="ten">Tên:</label>
+        <input type="text" id="ten" name="ten" required>
+
+        <br>
+
+        <label for="nhanTin">Nhận tin tức:</label>
+        <input type="checkbox" id="nhanTin" name="nhanTin">
+
+        <br>
+
+        <label for="gioiTinh">Giới tính:</label>
+        <input type="radio" id="nam" name="gioiTinh" value="Nam"> Nam
+        <input type="radio" id="nu" name="gioiTinh" value="Nữ"> Nữ
+
+        <br>
+
+        <button type="submit">Submit</button>
+    </form>
+    <script src="js/script7.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+body{
+    padding: 20px;
+}
+*{
+    padding:20px 0;
+    margin: 0;
+}
+.item{
+    background-color: rgb(14, 231, 14);
+    border:1px solid black;
+   
+
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 100px 100px 100px 200px ;
+    grid-template-areas:
+    "Header Header Header Header "
+    "Nav Article Article Article"
+    "Nav Article Article Article"
+    "Nav Article Article Article"
+    "Ads Ads Ads Footer" ;
+}
+.item-1{
+    grid-area: Header;
+ 
+}
+.item-2{
+    grid-area: Nav;
+   
+}
+.item-3{
+    grid-area:Article;
+}
+.item-4{
+    grid-area: Ads;
+
+}
+.item-5{
+    grid-area: Footer;
+}

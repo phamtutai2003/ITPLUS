@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+  <ul id="myList">
+    <li>
+      Phần tử 1
+    </li>
+    <li>
+      Phần tử 2     
+    </li>
+  </ul>
+  <input type="text" id="newText" placeholder="Nhập đoạn văn bản mới">
+  <button id="addButton">Thêm Đoạn Văn Bản</button>
+  <script>
+    $(document).ready(function(){
+      
+      $("#addButton").click(function(){
+        var newText = $("#newText").val();
+        if (newText !== "") {
+          var newParagraph = $("<li>" + newText + " <button class='deleteButton'>Xóa</button></li>");
+          $("#myList").append(newParagraph);
+          $("#newText").val("");
+        } else {
+          alert("Vui lòng nhập đoạn văn bản!");
+        }
+      });
+
+     
+      $("#myList").on("click", ".deleteButton", function(){
+        
+        $(this).parent().remove();
+      });
+    });
+  </script>
+
+</body>
+</html>

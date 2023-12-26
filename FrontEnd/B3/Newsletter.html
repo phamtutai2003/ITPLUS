@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        #header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        #content {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+        }
+
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div id="menu">
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Tutorial.html">Tutorial</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Newsletter.html">Newsletter</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a class="login" href="Login.html">Login</a></li>
+        </ul>
+        </div>
+    <div id="header">
+        <h1>Our Newsletter</h1>
+    </div>
+
+    <div id="content">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Stay updated with our latest news and updates. Subscribe to our newsletter!</p>
+
+        <form action="#" method="post">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your email address" required>
+
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+</body>
+</html>

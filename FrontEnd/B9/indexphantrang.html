@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Pagination Example</title>
+    <style>
+        .pagination {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+
+        .pagination li {
+            margin-right: 5px;
+            cursor: pointer;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <ul id="data-container" class="container mt-5">
+        <!-- Data will be loaded here -->
+    </ul>
+
+    <ul id="pagination" class="pagination"></ul>
+
+    <h1>Xin chao cac ban den voi lop Front end</h1>
+
+    <script>
+        var currentPage = 1;
+        var itemsPerPage = 5; // Number of items to display per page
+        var apiUrl = 'https://633ada64e02b9b64c619298b.mockapi.io/api/v1/users'; // Replace with your API endpoint
+
+        // Initial load
+        loadPage(currentPage);
+
+        // Pagination click event
+        document.getElementById('pagination').addEventListener('click', function (event) {
+            if (event.target.tagName.toLowerCase() === 'li') {
+                currentPage = parseInt(event.target.dataset.page);
+                loadPage(currentPage);
+            }
+        });
+
+        function loadPage(page) {
+            // Calculate the starting index based on the current page
+            var startIndex = (page - 1) * itemsPerPage;
+
+            // Fetch data from the API
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    // Get the container element
+                    var container = document.getElementById('data-container');
+                    container.innerHTML = ''; // Clear the container
+
+                    // Display items for the current page
+                    for (var i = startIndex; i < startIndex + itemsPerPage; i++) {
+                        if (data[i]) {
+                            var itemElement = document.createElement('li');
+                            itemElement.innerHTML = `<p>${data[i].name}</p>`; // Adjust based on your data properties
+                            container.appendChild(itemElement);
+                        }
+                    }
+
+                    // Update pagination
+                    updatePagination(data.length);
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+        }
+
+        function updatePagination(totalItems) {
+            // Calculate the total number of pages
+            var totalPages = Math.ceil(totalItems / itemsPerPage);
+
+            // Get the pagination container
+            var paginationContainer = document.getElementById('pagination');
+            paginationContainer.innerHTML = ''; // Clear the pagination
+
+            // Create pagination elements
+            for (var i = 1; i <= totalPages; i++) {
+                var pageElement = document.createElement('li');
+                pageElement.innerText = i;
+                pageElement.dataset.page = i;
+                if (i === currentPage) {
+                    pageElement.classList.add('active');
+                }
+                paginationContainer.appendChild(pageElement);
+            }
+        }
+    </script>
+
+</body>
+</html>

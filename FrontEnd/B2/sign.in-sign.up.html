@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LOGIN</title>
+   
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form id="signupForm">
+                <h1>Create Account</h1>
+                
+                <input type="text" id="name" placeholder="Name" />
+                <input type="email" id="email" placeholder="Email" />
+                <input type="password" id="password" placeholder="Password" />
+                <input type="tel" id="phone" placeholder="Phone" pattern="[0-9]*" title="Please enter only numeric characters" maxlength="10" oninput="this.value=this.value.replace(/[^0-9]/g,'')" required/>
+                <input type="text" id="address" placeholder="Address" />
+                <input type="date" id="date" placeholder="Date" />
+                <div id="warningMessage" class="warning-message"></div>
+                <button type="button" onclick="validateSignUp()">Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>Sign in</h1>
+                <input type="email" id="signInEmail" placeholder="Email" />
+                <input type="password" id="signInPassword" placeholder="Password" />
+                <a href="#">Forgot your password?</a>
+                <!-- Pass the signInWithEmail function directly in the onclick attribute -->
+                <button onclick="signInWithEmail()">Sign In</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us, please login with your personal info</p>
+                    <button class="ghost" id="signIn" onclick="signInWithEmail()">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your personal details and start your journey with us</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Variable to store the email entered during sign-up
+        var signUpEmail;
+
+        function validateSignUp() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var phone = document.getElementById('phone').value;
+            var address = document.getElementById('address').value;
+            var date = document.getElementById('date').value;   
+            var warningMessage = document.getElementById('warningMessage');  
+            
+            if (!name || !email || !password || !phone || !address || !date) {
+                warningMessage.innerText = 'Please fill in all fields.';
+            } else {
+                warningMessage.innerText = ''; // Clear the warning message
+                signUpEmail = email; // Store the email for later use
+                // No need to submit the form, just proceed to sign in
+                signInWithEmail();
+            }
+        }
+
+        // Function to set the email in the sign-in form
+        function setSignInEmail() {
+            // Set the email value in the sign-in form
+            document.getElementById('signInEmail').value = signUpEmail;
+        }
+
+        // Function to handle sign-in with the stored email
+        function signInWithEmail() {
+            setSignInEmail(); // Set the stored email in the sign-in form
+            // Add additional logic for sign-in if needed
+            // For now, you can redirect to the sign-in form or perform other actions
+        }
+    </script>
+</body>
+
+</html>
